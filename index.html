@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeGuard AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              gray: {
+                750: '#2d3748',
+                850: '#1a202c',
+                950: '#0d1117',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0d1117;
+        color: #e2e8f0;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1a202c; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4a5568; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #718096; 
+      }
+      .editor-container textarea {
+        outline: none !important;
+      }
+      
+      /* Print Styles for PDF Export */
+      @media print {
+        @page { margin: 1cm; size: auto; }
+        body, html, #root {
+          background-color: white !important;
+          color: black !important;
+          height: auto !important;
+          overflow: visible !important;
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .no-print, header, .sidebar, .editor-panel {
+          display: none !important;
+        }
+        .analysis-panel {
+          position: static !important;
+          width: 100% !important;
+          height: auto !important;
+          overflow: visible !important;
+          border: none !important;
+          transform: none !important;
+          display: block !important;
+        }
+        .analysis-panel * {
+          color: black !important;
+          border-color: #ddd !important;
+        }
+        .bg-gray-800, .bg-gray-900, .bg-[#161b22] {
+          background-color: white !important;
+          border: 1px solid #eee !important;
+          box-shadow: none !important;
+        }
+        .text-gray-300, .text-gray-400, .text-gray-500 {
+          color: #333 !important;
+        }
+        /* Hide scrollbars in print */
+        ::-webkit-scrollbar { display: none; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-simple-code-editor": "https://aistudiocdn.com/react-simple-code-editor@^0.14.1",
+    "prismjs/": "https://aistudiocdn.com/prismjs@^1.30.0/",
+    "prismjs": "https://aistudiocdn.com/prismjs@^1.30.0",
+    "diff": "https://aistudiocdn.com/diff@^5.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

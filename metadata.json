@@ -1,0 +1,5 @@
+{
+  "name": "Copy of CodeGuard AI - Intelligent Code Auditor",
+  "description": "A professional-grade AI code analysis tool. Upload project files or paste code to receive instant, deep-level security, logic, and syntax reviews powered by Gemini.",
+  "requestFramePermissions": []
+}
